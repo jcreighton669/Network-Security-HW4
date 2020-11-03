@@ -1,0 +1,38 @@
+				Ports Scan
+-----------------------------------------------
+Populate array to iterate through ports 1 - 65536 (inclusively)
+Start stopwatch
+PortScan the ports numbered in the array
+	If the result is an open port:
+		Add port number to open_array
+		Get protocol service for the open port
+		Add the port and the service to the dictionary
+	Else
+		?
+Stop stopwatch
+
+For open ports_array
+	Iterate through and assign ports to the proper line, (4096, 8192, 12288, etc.)
+	For line:
+		index  = (port_num // 256) + 1
+		Append index to line_array
+		Count the number of instances of an indidual number in line_array
+			If instance number > 1:
+				add instance_number of "!" to line_string
+			If instance number = 1:
+				add 1 "!" to line_string
+			Else:
+				Add "." to line_string
+		Count number of "." for line_string
+			If number of "." is < 16:
+				Add "." until 16 in line_string
+	Print line_string
+
+Print stats for Scan
+	Print number of ports found
+	Print total time
+	Print scan rate
+
+
+Iterate through open ports
+	Print port number and port service

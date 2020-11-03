@@ -1,0 +1,11 @@
+				Port Scan Detector
+-------------------------------------------------
+While KeyboradInterrupt != Ctrl-C
+	Loop through the ports sequentially
+		If port is scanned
+			Start timer
+			While timer <= 5 seconds
+				Print IP address of scanning computer
+				If 15 or more consecutive ports scanned by same computer:
+					Add IP address to list
+			
